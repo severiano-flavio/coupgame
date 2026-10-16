@@ -1,0 +1,27 @@
+{
+  "name": "coup-3d",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Coup 3D — jogo multiplayer online 3D baseado nas regras clássicas de Coup",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @coup/server --filter @coup/web dev",
+    "build": "pnpm --filter @coup/shared build && pnpm --filter @coup/server build && pnpm --filter @coup/web build",
+    "test": "pnpm -r --if-present test",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "9.17.0",
+    "eslint": "9.17.0",
+    "eslint-config-prettier": "9.1.0",
+    "prettier": "3.4.2",
+    "typescript": "5.7.2",
+    "typescript-eslint": "8.18.2"
+  },
+  "packageManager": "pnpm@12.11.2"
+}
